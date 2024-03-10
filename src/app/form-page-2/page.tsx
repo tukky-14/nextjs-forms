@@ -4,6 +4,7 @@ import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 import FormInput from '@/components/form-input';
+import SendButton from '@/components/send-button';
 import { schema } from '@/libs/validation';
 import { FormPageData } from '@/types/form-input';
 
@@ -35,12 +36,7 @@ const FormPage2: React.FC = () => {
                 trigger={trigger}
                 error={errors.age?.message}
             />
-            <button
-                className="rounded bg-blue-600 px-2 py-1 text-white hover:bg-blue-700"
-                type="submit"
-            >
-                Submit
-            </button>
+            <SendButton />
         </form>
     );
 };
