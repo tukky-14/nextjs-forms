@@ -23,18 +23,34 @@ const FormPage2: React.FC = () => {
     return (
         <form className="p-4" onSubmit={handleSubmit(onSubmit)}>
             <FormInput
-                label="名前"
+                label="お名前"
                 id="name"
                 register={register('name')}
                 trigger={trigger}
                 error={errors.name?.message}
             />
             <FormInput
-                label="年齢"
-                id="age"
-                register={register('age')}
+                label="メールアドレス"
+                id="email"
+                type="email"
+                register={register('email')}
                 trigger={trigger}
-                error={errors.age?.message}
+                error={errors.email?.message}
+            />
+            <FormInput
+                label="件名"
+                id="subject"
+                register={register('subject')}
+                trigger={trigger}
+                error={errors.subject?.message}
+            />
+            <FormInput
+                label="お問い合わせ内容"
+                id="message"
+                type="textarea"
+                register={register('message')}
+                trigger={trigger}
+                error={errors.message?.message}
             />
             <SendButton />
         </form>

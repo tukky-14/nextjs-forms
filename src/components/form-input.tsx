@@ -4,16 +4,20 @@ import { UseFormRegisterReturn, UseFormTrigger } from 'react-hook-form';
 type FormInputProps = {
     label: string;
     id: string;
+    type?: string;
     register: UseFormRegisterReturn;
     trigger: UseFormTrigger<any>;
     error?: string;
 };
 
-const FormInput: React.FC<FormInputProps> = ({ label, id, register, trigger, error }) => (
+const FormInput: React.FC<FormInputProps> = ({ label, id, type, register, trigger, error }) => (
     <div className="mb-2">
-        <label htmlFor={id}>{label}</label>
+        <label className="inline-block w-32" htmlFor={id}>
+            {label}
+        </label>
         <input
             className="ml-2 inline-block rounded border"
+            type={type}
             id={id}
             {...register}
             onBlur={() => trigger(id)}
