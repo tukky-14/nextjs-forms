@@ -7,7 +7,7 @@ import FormInput from '@/components/form-input';
 import { schema } from '@/libs/validation';
 import { FormPageData } from '@/types/form-input';
 
-const FormPage: React.FC = () => {
+const FormPage1: React.FC = () => {
     const {
         register,
         handleSubmit,
@@ -45,4 +45,4 @@ const FormPage: React.FC = () => {
     );
 };
 
-export default FormPage;
+export default FormPage1;
