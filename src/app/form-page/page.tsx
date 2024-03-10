@@ -12,6 +12,7 @@ const FormPage: React.FC = () => {
         register,
         handleSubmit,
         formState: { errors },
+        trigger,
     } = useForm<FormPageData>({ resolver: zodResolver(schema) });
 
     const onSubmit: SubmitHandler<FormPageData> = (data) => {
@@ -24,12 +25,14 @@ const FormPage: React.FC = () => {
                 label="名前"
                 id="name"
                 register={register('name')}
+                trigger={trigger}
                 error={errors.name?.message}
             />
             <FormInput
                 label="年齢"
                 id="age"
                 register={register('age')}
+                trigger={trigger}
                 error={errors.age?.message}
             />
             <button
