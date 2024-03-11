@@ -4,4 +4,5 @@ export type FormPageData = {
     email: string;
     subject: string;
     message: string;
+    date: string;
 };

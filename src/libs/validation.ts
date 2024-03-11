@@ -21,4 +21,5 @@ export const schema = z.object({
         .string()
         .min(1, { message: '必須入力です。' })
         .max(100, { message: 'お問い合わせ内容は100文字以内でご入力ください。' }),
+    date: z.string().min(1, { message: '必須入力です。' }),
 });

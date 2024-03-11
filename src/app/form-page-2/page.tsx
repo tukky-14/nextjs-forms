@@ -23,6 +23,14 @@ const FormPage2: React.FC = () => {
     return (
         <form className="p-4" onSubmit={handleSubmit(onSubmit)}>
             <FormInput
+                label="お問い合わせ日"
+                id="date"
+                type="date"
+                register={register('date')}
+                trigger={trigger}
+                error={errors.name?.message}
+            />
+            <FormInput
                 label="お名前"
                 id="name"
                 register={register('name')}
