@@ -16,7 +16,7 @@ const FormInput: React.FC<FormInputProps> = ({ label, id, type, register, trigge
             {label}
         </label>
         <input
-            className="ml-2 inline-block rounded border"
+            className="ml-2 inline-block w-40 rounded border"
             type={type}
             id={id}
             {...register}
