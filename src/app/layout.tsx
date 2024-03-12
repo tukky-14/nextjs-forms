@@ -27,6 +27,9 @@ export default function RootLayout({
                     <Link className="text-blue-600 hover:underline" href="/form-page-2">
                         FormPage2
                     </Link>
+                    <Link className="text-blue-600 hover:underline" href="/form-page-3">
+                        FormPage3
+                    </Link>
                 </div>
                 {children}
             </body>
