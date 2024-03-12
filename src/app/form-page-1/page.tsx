@@ -6,7 +6,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import FormInput from '@/components/form-input';
 import SendButton from '@/components/send-button';
 import { schema } from '@/libs/validation';
-import { FormPageData } from '@/types/form-input';
+import { FormPage1Data } from '@/types/form-input';
 
 const FormPage1: React.FC = () => {
     const {
@@ -14,9 +14,9 @@ const FormPage1: React.FC = () => {
         handleSubmit,
         formState: { errors },
         trigger,
-    } = useForm<FormPageData>({ resolver: zodResolver(schema) });
+    } = useForm<FormPage1Data>({ resolver: zodResolver(schema) });
 
-    const onSubmit: SubmitHandler<FormPageData> = (data) => {
+    const onSubmit: SubmitHandler<FormPage1Data> = (data) => {
         console.log(data);
     };
 
