@@ -14,7 +14,10 @@ const FormPage1: React.FC = () => {
         handleSubmit,
         formState: { errors },
         trigger,
-    } = useForm<FormPage1Data>({ resolver: zodResolver(schema) });
+    } = useForm<FormPage1Data>({
+        resolver: zodResolver(schema),
+        defaultValues: { name: '山田 太郎', age: 20 },
+    });
 
     const onSubmit: SubmitHandler<FormPage1Data> = (data) => {
         console.log(data);
