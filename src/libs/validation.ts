@@ -8,7 +8,16 @@ export const schema = z.object({
     age: z
         .string()
         .min(1, { message: '必須入力です。' })
-        .max(3, { message: '年齢は3桁以内でご入力ください。' }),
+        .transform((val) => parseFloat(val))
+        .refine((val) => !Number.isNaN(val), {
+            message: '数値で入力してください。',
+        })
+        .refine((val) => Number.isInteger(val), {
+            message: '整数で入力してください。',
+        })
+        .refine((val) => val > 0, {
+            message: '正の整数で入力してください。',
+        }),
     email: z
         .string()
         .min(1, { message: '必須入力です。' })
